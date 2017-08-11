@@ -1,6 +1,16 @@
-source "https://rubygems.org"
+source 'http://rubygems.org'
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+gem 'rake'
 
-# Specify your gem's dependencies in omniauth-acuity.gemspec
+group :development do
+  gem 'rubocop', '>= 0.48.1'
+end
+
+group :test do
+  # gem 'coveralls', require: false
+  gem 'rack-test'
+  gem 'rspec', '~> 3.6.0' # '~> 3.6.0'
+  gem 'simplecov', require: false
+end
+
 gemspec
