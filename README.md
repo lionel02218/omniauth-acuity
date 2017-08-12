@@ -21,8 +21,12 @@ Or install it yourself as:
     $ gem install omniauth-acuity
 
 ## Usage
+Add to omniauth.rb
+  Rails.application.config.middleware.use OmniAuth::Builder do
+    ...
+    provider :acuity, ENV['ACUITY_CLIENT_ID'], ENV['ACUITY_SECRET_KEY']
+  end
 
-TODO: Write usage instructions here
 
 ## Development
 
